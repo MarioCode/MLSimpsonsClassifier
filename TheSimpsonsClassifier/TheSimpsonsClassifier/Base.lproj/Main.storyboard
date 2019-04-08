@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TheSimpsonsClassifier" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBs-3C-cIN">
+                                <rect key="frame" x="25" y="100" width="325" height="417"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="simpsons_PNG3" translatesAutoresizingMaskIntoConstraints="NO" id="xQT-qO-Ewo">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="417"/>
+                                        <color key="backgroundColor" red="1" green="0.97811378642209912" blue="0.96451304721123943" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="xQT-qO-Ewo" secondAttribute="bottom" id="5um-NH-v7e"/>
+                                    <constraint firstItem="xQT-qO-Ewo" firstAttribute="leading" secondItem="dBs-3C-cIN" secondAttribute="leading" id="N1I-F7-udA"/>
+                                    <constraint firstItem="xQT-qO-Ewo" firstAttribute="top" secondItem="dBs-3C-cIN" secondAttribute="top" id="dgv-OJ-FWs"/>
+                                    <constraint firstAttribute="trailing" secondItem="xQT-qO-Ewo" secondAttribute="trailing" id="sG3-hr-9So"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="aVB-lK-55y">
+                                <rect key="frame" x="25" y="527" width="325" height="50"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UU9-fB-asd">
+                                <rect key="frame" x="20" y="597" width="335" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dD-Yq-aF3">
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="45"/>
+                                        <state key="normal" title="Camera" backgroundImage="BlueRec"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r6w-kn-FJJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dF-SA-eOL">
+                                        <rect key="frame" x="115" y="0.0" width="105" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                        <state key="normal" title="Live" backgroundImage="RedRec">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="liveVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J4l-Ox-TjS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwC-lV-KyO">
+                                        <rect key="frame" x="230" y="0.0" width="105" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <state key="normal" title="Library" backgroundImage="PurpleRec">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="openLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xaD-Tj-Va2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="simpsFont" translatesAutoresizingMaskIntoConstraints="NO" id="LuI-Lq-cBh">
+                                <rect key="frame" x="11" y="45" width="353" height="35"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dBs-3C-cIN" secondAttribute="trailing" constant="25" id="6ze-JL-DSr"/>
+                            <constraint firstItem="dBs-3C-cIN" firstAttribute="top" secondItem="LuI-Lq-cBh" secondAttribute="bottom" constant="20" id="9bG-cW-DuT"/>
+                            <constraint firstItem="aVB-lK-55y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="AuP-No-09U"/>
+                            <constraint firstItem="LuI-Lq-cBh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="PMf-nP-2Le"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UU9-fB-asd" secondAttribute="trailing" constant="20" id="PYp-YO-6Zi"/>
+                            <constraint firstItem="LuI-Lq-cBh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="ShA-2g-XBH"/>
+                            <constraint firstItem="aVB-lK-55y" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="50 : 667" id="SnA-sP-GMu"/>
+                            <constraint firstItem="dBs-3C-cIN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="XPT-O7-SUl"/>
+                            <constraint firstItem="aVB-lK-55y" firstAttribute="top" secondItem="dBs-3C-cIN" secondAttribute="bottom" constant="10" id="Xjq-Aa-Cja"/>
+                            <constraint firstItem="LuI-Lq-cBh" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="35 : 667" id="fYd-Yi-8L6"/>
+                            <constraint firstItem="UU9-fB-asd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jDE-6o-S6i"/>
+                            <constraint firstItem="UU9-fB-asd" firstAttribute="top" secondItem="aVB-lK-55y" secondAttribute="bottom" constant="20" id="rt6-8D-Opb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LuI-Lq-cBh" secondAttribute="trailing" constant="11" id="uM5-qS-LTm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UU9-fB-asd" secondAttribute="bottom" constant="25" id="v26-FE-Z8G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aVB-lK-55y" secondAttribute="trailing" constant="25" id="vra-89-Kw3"/>
+                            <constraint firstItem="UU9-fB-asd" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="45 : 667" id="zFW-3G-BzK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="plotImageView" destination="xQT-qO-Ewo" id="jZB-Cl-AR7"/>
+                        <outlet property="plotView" destination="dBs-3C-cIN" id="QI0-hU-1hs"/>
+                        <outlet property="predictLabel" destination="aVB-lK-55y" id="ehl-MJ-NgW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.125" y="133.09859154929578"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BlueRec" width="305" height="82"/>
+        <image name="PurpleRec" width="305" height="82"/>
+        <image name="RedRec" width="305" height="147"/>
+        <image name="simpsFont" width="952" height="90"/>
+        <image name="simpsons_PNG3" width="1430" height="1381"/>
+    </resources>
+</document>
