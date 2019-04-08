@@ -14,7 +14,7 @@
 - Batch size: 610
 - Accuracy: 0.8489 (but it seems to be much lower)
 
-```
+```python
 model = Sequential()
 
 model.add(Conv2D(filters=48, kernel_size=(3, 3), strides=(1, 1), activation='relu', input_shape=input_shape))
@@ -40,7 +40,7 @@ model.save('simpsons_model.h5')
 #### 3. Use CoremlTools. 
 Convert the Keras model (.h5) to the CoreML model.
 
-```
+```python
 coreml_model = coremltools.converters.keras.convert(model,
                                                     input_names='image',
                                                     image_input_names='image',
@@ -60,7 +60,7 @@ Size after converting 130 MB -> 1.5 MB
 - Swift
 - import CoreML, Vision, AVKit (Live Camera)
 
-```
+```swift
 private func getCoreMLModel() -> VNCoreMLModel? {
     guard let model = try? VNCoreMLModel(for: simpsons_model().model) else {
         return nil
