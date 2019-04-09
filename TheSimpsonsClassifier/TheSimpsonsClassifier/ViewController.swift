@@ -127,7 +127,7 @@ extension ViewController: UIImagePickerControllerDelegate, AVCaptureVideoDataOut
             return
         }
         
-        predictionViewModel.predictImage(.pixels(buffer: pixelBuffer)) { result in
+        predictionViewModel.predictImage(.pixels(buffer: pixelBuffer.resize(96))) { result in
             DispatchQueue.main.async { [weak self] in
                 self?.predictLabel.text = result
             }
