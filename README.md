@@ -52,9 +52,6 @@ coreml_model.input_description['image'] = 'Image of one of the Simpsons characte
 coreml_model.output_description['output1'] = 'Character recognition probability'
 coreml_model.save('simpsons_model.mlmodel')
 ```
-Size after converting 130 MB -> 1.5 MB
-
-<img width="579" alt="ModelSize" src="https://user-images.githubusercontent.com/12527666/55710879-3a81fb00-59f4-11e9-8ea1-c6150fb439dc.png">
 
 #### 4. Sample iOS App
 - Swift
